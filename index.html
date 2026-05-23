@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Costa e Bueno Advogados — Especialistas em Consórcios Cancelados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0f0d0a;
+    --ink-2:#2b2620;
+    --muted:#6f6a62;
+    --bone:#fbf8f2;
+    --bone-2:#f4ecdc;
+    --paper:#ffffff;
+    --gold:#b08537;
+    --gold-2:#c89a4a;
+    --gold-soft:#e6cf9a;
+    --gold-glow:rgba(176,133,55,0.18);
+    --line:rgba(176,133,55,0.22);
+    --line-2:rgba(15,13,10,0.08);
+    --shadow-sm:0 1px 2px rgba(15,13,10,0.04),0 6px 18px rgba(15,13,10,0.05);
+    --shadow-md:0 10px 30px rgba(15,13,10,0.08),0 2px 6px rgba(15,13,10,0.04);
+    --shadow-lg:0 30px 80px rgba(15,13,10,0.12);
+    --r-sm:10px;
+    --r-md:18px;
+    --r-lg:28px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Manrope",ui-sans-serif,system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+  .container{
+    width:100%;
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- TYPE ---------- */
+  .serif{font-family:"Cormorant Garamond",serif;font-weight:500;letter-spacing:-0.01em}
+  h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:-0.015em;color:var(--ink);margin:0;text-wrap:balance}
+  h1{font-size:clamp(40px,5.6vw,72px);line-height:1.02}
+  h2{font-size:clamp(32px,4vw,52px);line-height:1.08}
+  h3{font-size:clamp(20px,1.6vw,24px);line-height:1.2;font-weight:600}
+  p{margin:0;text-wrap:pretty}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:"Manrope",sans-serif;
+    font-size:12px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.22em;
+    color:var(--gold);
+  }
+  .eyebrow::before{
+    content:"";display:inline-block;width:28px;height:1px;background:var(--gold);
+  }
+  .eyebrow.center::after{
+    content:"";display:inline-block;width:28px;height:1px;background:var(--gold);
+  }
+
+  .gold-text{color:var(--gold)}
+  .ink-2{color:var(--ink-2)}
+  .muted{color:var(--muted)}
+  .italic{font-style:italic}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,0.78);
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    border-bottom:1px solid var(--line-2);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;
+    gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:52px;width:auto}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:20px;color:var(--ink);white-space:nowrap}
+  .brand-sub{font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink-2);transition:color .2s}
+  .nav-links a:hover{color:var(--gold)}
+  @media (max-width:1020px){.nav-links{display:none}}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 26px;border-radius:999px;
+    font-weight:600;font-size:15px;letter-spacing:0.01em;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    white-space:nowrap;
+  }
+  .btn-gold{
+    background:linear-gradient(180deg,var(--gold-2),var(--gold));
+    color:#fff;
+    box-shadow:0 10px 24px rgba(176,133,55,0.32), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-gold:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(176,133,55,0.42), inset 0 1px 0 rgba(255,255,255,0.3)}
+  .btn-ghost{
+    background:transparent;color:var(--ink);
+    border:1px solid var(--line);
+  }
+  .btn-ghost:hover{background:var(--bone);border-color:var(--gold)}
+  .btn-wa{
+    background:#1faa54;color:#fff;
+    box-shadow:0 10px 24px rgba(31,170,84,0.32), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-wa:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(31,170,84,0.42)}
+  .btn .ico{width:18px;height:18px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 600px at 85% -10%, rgba(176,133,55,0.10), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(176,133,55,0.08), transparent 60%),
+      var(--paper);
+    padding:72px 0 110px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-left .eyebrow{margin-bottom:22px}
+  .hero h1 span.script{
+    font-style:italic;font-weight:500;color:var(--gold);
+  }
+  .hero-lede{
+    margin-top:22px;max-width:560px;
+    color:var(--ink-2);font-size:18px;line-height:1.65;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-meta{
+    display:flex;gap:28px;margin-top:48px;flex-wrap:wrap;
+    padding-top:28px;border-top:1px solid var(--line-2);
+  }
+  .meta-item .num{
+    font-family:"Cormorant Garamond",serif;
+    font-size:34px;font-weight:600;color:var(--ink);line-height:1;
+  }
+  .meta-item .num em{color:var(--gold);font-style:normal}
+  .meta-item .lbl{font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-top:6px}
+
+  .hero-right{position:relative}
+  .photo-frame{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-lg);
+    background:var(--bone-2);
+  }
+  .photo-frame img{
+    width:100%;height:100%;object-fit:cover;object-position:60% center;
+    filter:saturate(0.95) contrast(1.02);
+  }
+  .photo-frame::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(15,13,10,0) 55%, rgba(15,13,10,0.35) 100%);
+    pointer-events:none;
+  }
+  .photo-tag{
+    position:absolute;left:-18px;bottom:36px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--r-md);
+    padding:16px 20px;
+    box-shadow:var(--shadow-md);
+    display:flex;align-items:center;gap:14px;
+    max-width:280px;
+  }
+  .photo-tag .dot{width:10px;height:10px;border-radius:999px;background:#1faa54;box-shadow:0 0 0 6px rgba(31,170,84,0.15)}
+  .photo-tag .pt{font-size:13px;line-height:1.35}
+  .photo-tag .pt b{display:block;font-size:14px;color:var(--ink);margin-bottom:2px}
+
+  .gold-badge{
+    position:absolute;right:-18px;top:36px;
+    background:var(--ink);color:var(--bone);
+    border-radius:var(--r-md);padding:18px 22px;
+    box-shadow:var(--shadow-md);
+    max-width:240px;
+  }
+  .gold-badge .num{font-family:"Cormorant Garamond",serif;font-size:42px;line-height:1;color:var(--gold-soft)}
+  .gold-badge .lbl{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-top:8px}
+
+  @media (max-width:980px){
+    .hero{padding:48px 0 72px}
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .hero-right{max-width:520px;margin:0 auto}
+    .gold-badge{right:-8px}
+    .photo-tag{left:-8px}
+  }
+
+  /* ---------- DIVIDER ORNAMENT ---------- */
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    color:var(--gold);
+  }
+  .ornament .ln{height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .ornament .dia{width:8px;height:8px;border:1px solid var(--gold);transform:rotate(45deg)}
+
+  /* ---------- WHY (importance) ---------- */
+  .why{
+    padding:110px 0;
+    background:linear-gradient(180deg,var(--paper),var(--bone) 45%, var(--paper));
+  }
+  .why-head{text-align:center;max-width:760px;margin:0 auto 64px}
+  .why-head .eyebrow{margin-bottom:18px}
+  .why-head p{margin-top:18px;color:var(--ink-2);font-size:18px}
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .why-card{
+    position:relative;
+    background:var(--paper);
+    border:1px solid var(--line-2);
+    border-radius:var(--r-md);
+    padding:32px 28px 28px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .why-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--line)}
+  .why-num{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:42px;color:var(--gold);line-height:1;
+    margin-bottom:18px;
+  }
+  .why-card h3{margin-bottom:10px}
+  .why-card p{color:var(--muted);font-size:15px;line-height:1.6}
+  .why-card::before{
+    content:"";position:absolute;left:28px;right:28px;top:0;height:2px;
+    background:linear-gradient(90deg,var(--gold),transparent);
+    opacity:0;transition:opacity .25s ease;
+  }
+  .why-card:hover::before{opacity:1}
+  @media (max-width:880px){
+    .why{padding:72px 0}
+    .why-grid{grid-template-columns:1fr;gap:14px}
+  }
+
+  /* ---------- STRONG CTA (WhatsApp) ---------- */
+  .cta{
+    padding:90px 0;
+    background:
+      radial-gradient(800px 400px at 80% 20%, rgba(176,133,55,0.20), transparent 60%),
+      radial-gradient(700px 400px at 10% 90%, rgba(176,133,55,0.15), transparent 60%),
+      #0f0d0a;
+    color:var(--bone);
+    position:relative;overflow:hidden;
+  }
+  .cta::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(230,207,154,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(230,207,154,0.05) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(ellipse at center, rgba(0,0,0,0.6), transparent 70%);
+    pointer-events:none;
+  }
+  .cta-inner{
+    position:relative;
+    display:grid;grid-template-columns:1.2fr 1fr;
+    gap:56px;align-items:center;
+  }
+  .cta h2{color:var(--bone);font-size:clamp(34px,4.4vw,58px)}
+  .cta h2 em{color:var(--gold-soft);font-style:italic;font-weight:500}
+  .cta-lead{margin-top:20px;font-size:18px;color:rgba(251,248,242,0.78);max-width:520px}
+  .cta-bullets{
+    display:grid;gap:14px;margin-top:30px;
+  }
+  .cta-bullets li{
+    display:flex;align-items:flex-start;gap:12px;
+    color:rgba(251,248,242,0.86);font-size:15px;
+    list-style:none;
+  }
+  .cta-bullets ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .check{
+    flex:none;width:22px;height:22px;border-radius:999px;
+    background:rgba(230,207,154,0.15);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-soft);
+  }
+  .cta-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .cta-phone{
+    background:var(--paper);color:var(--ink);
+    border-radius:var(--r-md);padding:28px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid rgba(255,255,255,0.06);
+  }
+  .cta-phone .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.16em}
+  .cta-phone .name{
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;
+    font-size:26px;margin:6px 0 2px;color:var(--ink);
+  }
+  .cta-phone .role{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .chatbox{
+    background:var(--bone);border-radius:14px;padding:14px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .bubble{
+    max-width:85%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.45;
+  }
+  .bubble.them{background:#fff;border:1px solid var(--line-2);align-self:flex-start;border-bottom-left-radius:4px}
+  .bubble.me{background:#dcf8c6;color:#0f3d1d;align-self:flex-end;border-bottom-right-radius:4px}
+  .bubble .time{display:block;font-size:10px;color:var(--muted);margin-top:4px;text-align:right}
+  .typing{display:inline-flex;gap:4px;padding:6px 0}
+  .typing span{width:6px;height:6px;border-radius:999px;background:var(--muted);animation:blink 1.2s infinite ease-in-out}
+  .typing span:nth-child(2){animation-delay:.2s}
+  .typing span:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-2px)}}
+
+  @media (max-width:980px){
+    .cta-inner{grid-template-columns:1fr;gap:36px}
+    .cta{padding:64px 0}
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:110px 0;background:var(--paper)}
+  .faq-head{text-align:center;max-width:680px;margin:0 auto 56px}
+  .faq-head p{margin-top:16px;color:var(--ink-2);font-size:18px}
+  .faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .faq-item{
+    border:1px solid var(--line-2);
+    border-radius:var(--r-md);
+    background:var(--paper);
+    transition:border-color .25s ease, box-shadow .25s ease, background .25s ease;
+    overflow:hidden;
+  }
+  .faq-item[open]{
+    border-color:var(--line);
+    box-shadow:var(--shadow-sm);
+    background:linear-gradient(180deg,var(--paper),var(--bone));
+  }
+  .faq-item summary{
+    list-style:none;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:24px 28px;
+    cursor:pointer;
+    font-family:"Cormorant Garamond",serif;
+    font-size:22px;font-weight:600;color:var(--ink);
+    line-height:1.25;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-q{display:flex;align-items:center;gap:18px}
+  .faq-q .qnum{
+    font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;
+    font-size:18px;color:var(--gold);min-width:30px;
+  }
+  .faq-plus{
+    flex:none;width:36px;height:36px;border-radius:999px;
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);transition:transform .25s ease, background .25s ease, color .25s ease;
+  }
+  .faq-item[open] .faq-plus{transform:rotate(45deg);background:var(--gold);color:#fff;border-color:var(--gold)}
+  .faq-body{
+    padding:0 28px 26px 76px;
+    color:var(--ink-2);font-size:16px;line-height:1.7;
+  }
+  @media (max-width:680px){
+    .faq{padding:72px 0}
+    .faq-item summary{padding:20px 20px;font-size:18px}
+    .faq-body{padding:0 20px 22px 20px}
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    background:#0f0d0a;color:rgba(251,248,242,0.7);
+    padding:60px 0 28px;
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;
+  }
+  .footer-brand .brand-name{color:var(--bone)}
+  .footer-brand .brand-sub{color:rgba(251,248,242,0.5)}
+  .footer p.small{font-size:14px;line-height:1.6;margin-top:14px;max-width:300px}
+  .footer h4{
+    font-family:"Manrope",sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--gold-soft);margin:0 0 16px;font-weight:600;
+  }
+  .footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:14px}
+  .footer ul a:hover{color:var(--gold-soft)}
+  .footer-bottom{
+    border-top:1px solid rgba(251,248,242,0.1);
+    margin-top:48px;padding-top:22px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:12px;color:rgba(251,248,242,0.5);
+  }
+  @media (max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+  @media (max-width:520px){.footer-grid{grid-template-columns:1fr}}
+
+  /* ---------- FLOATING WA ---------- */
+  .fab{
+    position:fixed;right:22px;bottom:22px;z-index:50;
+    width:60px;height:60px;border-radius:999px;
+    background:#1faa54;color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 14px 30px rgba(31,170,84,0.4), 0 4px 12px rgba(0,0,0,0.12);
+    transition:transform .2s ease;
+  }
+  .fab:hover{transform:scale(1.06)}
+  .fab::before{
+    content:"";position:absolute;inset:-6px;border-radius:999px;
+    border:2px solid rgba(31,170,84,0.4);
+    animation:pulse 2s ease-out infinite;
+  }
+  @keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+
+  /* ---------- ABOUT (Quem Somos) ---------- */
+  .about{padding:110px 0;background:linear-gradient(180deg,var(--paper),var(--bone) 50%,var(--paper))}
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center}
+  .about-left .eyebrow{margin-bottom:18px}
+  .about-desc{margin-top:20px;color:var(--ink-2);font-size:17px;line-height:1.75;max-width:560px}
+  .area-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .area-tag{
+    padding:7px 16px;border-radius:999px;
+    border:1px solid var(--line);
+    font-size:13px;font-weight:600;
+    color:var(--ink-2);letter-spacing:0.03em;
+    background:var(--paper);
+  }
+  .about-right{display:flex;flex-direction:column;gap:18px}
+  .google-card{
+    background:var(--paper);border:1px solid var(--line-2);
+    border-radius:var(--r-md);padding:28px 28px 24px;
+    box-shadow:var(--shadow-sm);
+  }
+  .google-card .gc-logo{
+    font-size:13px;font-weight:700;letter-spacing:0.04em;
+    color:var(--muted);text-transform:uppercase;margin-bottom:10px;
+  }
+  .stars{display:flex;gap:4px;color:#f59e0b;font-size:22px;line-height:1;margin-bottom:10px}
+  .google-card .gc-label{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
+  .google-card .gc-sub{font-size:13px;color:var(--muted)}
+  .location-card{
+    background:var(--ink);color:var(--bone);
+    border-radius:var(--r-md);padding:22px 28px;
+    display:flex;align-items:center;gap:16px;
+  }
+  .location-card .loc-icon{
+    flex:none;width:40px;height:40px;border-radius:999px;
+    background:rgba(230,207,154,0.12);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-soft);
+  }
+  .location-card .loc-name{
+    font-family:"Cormorant Garamond",serif;
+    font-size:20px;font-weight:600;color:var(--bone);
+  }
+  .location-card .loc-sub{font-size:13px;color:rgba(251,248,242,0.6);margin-top:2px}
+  @media (max-width:880px){
+    .about{padding:72px 0}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* selection */
+  ::selection{background:var(--gold-soft);color:var(--ink)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Costa e Bueno Advogados">
+      <img src="assets/logo.png" alt="Costa e Bueno" />
+      <div class="brand-text">
+        <span class="brand-name">Costa e Bueno</span>
+        <span class="brand-sub">Advogados</span>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="primária">
+      <a href="#sobre">A Banca</a>
+      <a href="#importancia">Por que um advogado</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a href="#cta" class="btn btn-gold" style="padding:11px 20px;font-size:14px">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Falar com especialista
+    </a>
+  </div>
+</header>
+
+<a class="fab" href="#cta" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A10 10 0 0 0 4.5 18.27L3 22l3.83-1.46A10 10 0 1 0 19.05 4.91Zm-7.1 15.36a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.27.87.87-2.2-.2-.32a8.3 8.3 0 1 1 6.12 2.99Zm4.55-6.2c-.25-.13-1.47-.73-1.7-.81-.23-.08-.4-.13-.56.13-.17.25-.65.81-.8.97-.14.17-.3.18-.55.06a6.78 6.78 0 0 1-2-1.23 7.49 7.49 0 0 1-1.38-1.72c-.14-.25 0-.38.11-.5.11-.11.25-.3.37-.44.13-.15.17-.26.25-.43.08-.17.04-.32-.02-.45-.06-.13-.56-1.36-.77-1.87-.2-.49-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31 2.78 2.78 0 0 0-.87 2.07c0 1.22.89 2.4 1.02 2.57.13.17 1.76 2.69 4.27 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.14-1.19-.06-.1-.23-.16-.48-.29Z"/></svg>
+</a>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <span class="eyebrow">Costa e Bueno · Advocacia Especializada</span>
+      <h1>
+        Seu consórcio foi cancelado?
+        <br/>
+        <span class="script">Você pode estar pagando mais do que deve</span> — e temos como provar.
+      </h1>
+      <p class="hero-lede">
+        Somos uma banca especializada em direito de consórcios. Atuamos para anular multas abusivas, garantir a correção monetária correta e questionar taxas de administração irregulares — em todo o Brasil, com técnica e discrição.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" href="#cta">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A10 10 0 0 0 4.5 18.27L3 22l3.83-1.46A10 10 0 1 0 19.05 4.91Zm-3.1 8.16c-.25-.13-1.47-.73-1.7-.81-.23-.08-.4-.13-.56.13-.17.25-.65.81-.8.97-.14.17-.3.18-.55.06a6.78 6.78 0 0 1-2-1.23 7.49 7.49 0 0 1-1.38-1.72c-.14-.25 0-.38.11-.5.11-.11.25-.3.37-.44.13-.15.17-.26.25-.43.08-.17.04-.32-.02-.45-.06-.13-.56-1.36-.77-1.87-.2-.49-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31 2.78 2.78 0 0 0-.87 2.07c0 1.22.89 2.4 1.02 2.57.13.17 1.76 2.69 4.27 3.76.6.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.14-1.19-.06-.1-.23-.16-.48-.29Z"/></svg>
+          Falar agora pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#importancia">Entender meu caso</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <div class="num"><em>+12</em> anos</div>
+          <div class="lbl">de atuação no direito</div>
+        </div>
+        <div class="meta-item">
+          <div class="num"><em>+1.800</em></div>
+          <div class="lbl">clientes representados</div>
+        </div>
+        <div class="meta-item">
+          <div class="num"><em>97%</em></div>
+          <div class="lbl">de êxito em acordos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-frame">
+        <img src="assets/advogado.png" alt="Dr. Costa, advogado especialista em consórcios cancelados" />
+      </div>
+      <div class="photo-tag">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="pt">
+          <b>Atendimento online</b>
+          Resposta em até 15 minutos no horário comercial.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="importancia">
+  <div class="container">
+    <div class="why-head reveal">
+      <span class="eyebrow center">Por que um advogado especialista</span>
+      <h2>A administradora raramente entrega o valor correto por conta própria.</h2>
+      <p>A lei garante seus direitos — e a administradora sabe disso. Veja como um especialista pode reduzir o que você paga e, em muitos casos, buscar a devolução dos valores via acordo judicial.</p>
+    </div>
+
+    <div class="why-grid">
+      <article class="why-card reveal">
+        <div class="why-num">01</div>
+        <h3>Redução das cobranças indevidas</h3>
+        <p>Com a ação certa, é possível anular multas contratuais abusivas e garantir que as taxas de administração sejam proporcionais — reduzindo o que a administradora cobra de você.</p>
+      </article>
+      <article class="why-card reveal">
+        <div class="why-num">02</div>
+        <h3>Correção monetária real</h3>
+        <p>Exigimos a aplicação do índice de correção correto sobre o saldo — o que a administradora raramente faz sem pressão judicial.</p>
+      </article>
+      <article class="why-card reveal">
+        <div class="why-num">03</div>
+        <h3>Sem risco para você</h3>
+        <p>Trabalhamos com honorários condicionados ao êxito. Você só paga quando o dinheiro cai na sua conta.</p>
+      </article>
+      <article class="why-card reveal">
+        <div class="why-num">04</div>
+        <h3>Atuação 100% online</h3>
+        <p>Atendemos clientes em todo o Brasil. Toda a documentação e o acompanhamento são feitos pelo seu celular.</p>
+      </article>
+      <article class="why-card reveal">
+        <div class="why-num">05</div>
+        <h3>Equipe especializada</h3>
+        <p>Nada de generalistas. Nossa banca atua exclusivamente com consórcios cancelados, desistidos e excluídos.</p>
+      </article>
+      <article class="why-card reveal">
+        <div class="why-num">06</div>
+        <h3>Transparência real</h3>
+        <p>Você acompanha cada etapa do processo, com acesso direto ao advogado responsável — sem secretárias no meio.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STRONG CTA -->
+<section class="cta" id="cta">
+  <div class="container cta-inner">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--gold-soft)">— Atendimento direto</span>
+      <h2 style="margin-top:18px">Não feche a conta sem antes saber
+        <em>o que está sendo cobrado indevidamente.</em></h2>
+      <p class="cta-lead">Em uma conversa rápida pelo WhatsApp, analisamos o seu contrato e identificamos multas abusivas, correção monetária incorreta e taxas irregulares. Em muitos casos, é possível buscar um acordo judicial para devolução dos valores — sem depender do encerramento do grupo. Cada caso é único, e você merece uma análise honesta do seu.</p>
+
+      <ul class="cta-bullets">
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Análise gratuita do contrato em até 24 horas</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Identificação das cobranças indevidas e do que pode ser contestado</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Sigilo absoluto e atendimento direto com o advogado</li>
+      </ul>
+
+      <p style="margin-top:22px;font-size:13px;color:rgba(251,248,242,0.5);border-top:1px solid rgba(230,207,154,0.12);padding-top:18px;line-height:1.6"><strong style="color:rgba(230,207,154,0.7)">Aviso importante:</strong> Cada caso é analisado individualmente. A possibilidade de devolução de valores depende da postura da administradora e das condições do contrato. Não garantimos resultado — garantimos dedicação técnica e transparência em cada etapa.</p>
+
+      <div class="cta-actions">
+        <a class="btn btn-wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A10 10 0 0 0 4.5 18.27L3 22l3.83-1.46A10 10 0 1 0 19.05 4.91Z"/></svg>
+          Falar agora no WhatsApp
+        </a>
+        <a class="btn btn-ghost" style="color:var(--bone);border-color:rgba(230,207,154,0.3)" href="tel:+5500000000000">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (00) 0000-0000
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-phone reveal" id="atendimento">
+      <div class="label">— Conversa real</div>
+      <div class="name">Dr. Costa</div>
+      <div class="role">Advogado responsável · OAB/XX 000.000</div>
+      <div class="chatbox" aria-hidden="true">
+        <div class="bubble me">Olá, meu consórcio foi cancelado. A administradora está me cobrando multas. Tenho como contestar?
+          <span class="time">14:02</span>
+        </div>
+        <div class="bubble them">Olá! Em muitos casos sim. Pode me enviar o número do contrato e desde quando você está pagando?
+          <span class="time">14:02</span>
+        </div>
+        <div class="bubble me">Pago há 3 anos, R$ 580 por mês.
+          <span class="time">14:03</span>
+        </div>
+        <div class="bubble them">Com esses valores já consigo identificar cobranças a contestar. Em muitos casos anulamos as multas e, dependendo da administradora, negociamos a devolução. Posso analisar seu contrato com mais detalhes?
+          <span class="time">14:03</span>
+        </div>
+        <div class="bubble them"><span class="typing"><span></span><span></span><span></span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div class="about-left reveal">
+      <span class="eyebrow">O Escritório</span>
+      <h2>Atendimento humano.<br/><span class="gold-text italic">Comprometimento real.</span></h2>
+      <p class="about-desc">
+        O Costa e Bueno Advogados é um escritório dedicado ao atendimento próximo e personalizado. Com sede em Santo André, atuamos nas áreas de Direito de Família, Trabalhista, Sucessório e do Consumidor — sempre com transparência, dedicação e eficiência jurídica em cada caso conduzido.
+      </p>
+      <p class="about-desc" style="margin-top:14px">
+        Acreditamos que cada cliente merece mais do que uma petição: merece um acompanhamento claro, direto e humano, do primeiro contato até o encerramento do processo.
+      </p>
+      <div class="area-tags">
+        <span class="area-tag">Direito de Família</span>
+        <span class="area-tag">Direito Trabalhista</span>
+        <span class="area-tag">Direito Sucessório</span>
+        <span class="area-tag">Direito do Consumidor</span>
+        <span class="area-tag">Consórcios</span>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="google-card">
+        <div class="gc-logo">Avaliações · Google</div>
+        <div class="stars">★★★★★</div>
+        <div class="gc-label">Avaliação máxima dos clientes</div>
+        <div class="gc-sub">Histórico de satisfação e confiança no atendimento prestado.</div>
+      </div>
+      <div class="location-card">
+        <div class="loc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="loc-name">Santo André · SP</div>
+          <div class="loc-sub">Atendimento presencial e online em todo o Brasil</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-head reveal">
+      <span class="eyebrow center">Perguntas frequentes</span>
+      <h2 style="margin-top:18px">Dúvidas? A gente responde.</h2>
+      <p>Reunimos as perguntas que mais ouvimos de clientes que tiveram consórcios cancelados, desistidos ou excluídos.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal" open>
+        <summary>
+          <span class="faq-q"><span class="qnum">01</span> Tenho direito a receber se desisti do consórcio?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          Sim. Mesmo em caso de desistência, a lei garante a análise das cobranças realizadas — incluindo multas contratuais, taxas de administração e correção monetária. Dependendo do caso e da posição da administradora, pode ser possível buscar um acordo para contestar cobranças ou discutir a devolução dos valores, sem aguardar o encerramento do grupo.
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q"><span class="qnum">02</span> Em quanto tempo recebo o valor?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          O prazo varia conforme o tribunal e a posição da administradora. Quando há acordo judicial, muitos casos se resolvem muito antes do encerramento do grupo — que pode levar anos se você aguardar passivamente. Analisamos a perspectiva real do seu processo desde o início, sem criar expectativas que o caso não sustenta.
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q"><span class="qnum">03</span> E se eu fui excluído por atraso?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          Mesmo o consorciado excluído por inadimplência tem direito à devolução dos valores pagos, descontadas as taxas previstas. Esse é, aliás, um dos casos mais comuns que atendemos.
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q"><span class="qnum">04</span> Preciso pagar algo para iniciar?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          Não. A análise do seu contrato é totalmente gratuita e nossos honorários são cobrados apenas em caso de êxito — ou seja, depois que o valor cair na sua conta.
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q"><span class="qnum">05</span> Vocês atendem em qualquer estado?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          Sim. Atuamos em todo o território nacional, com atendimento 100% online. Toda a tramitação é feita digitalmente, com envio de documentos pelo seu celular e atualizações periódicas do processo.
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q"><span class="qnum">06</span> Quanto vou receber no meu caso?</span>
+          <span class="faq-plus" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </summary>
+        <div class="faq-body">
+          Cada caso é único e depende do valor da carta, das parcelas pagas, das cobranças realizadas e da posição da administradora. Não trabalhamos com promessas genéricas. Analisamos o seu contrato e apontamos com clareza quais cobranças são contestáveis — e qual o caminho mais realista para o seu caso.
+        </div>
+      </details>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <div class="ornament" style="margin-bottom:22px"><span class="ln"></span><span class="dia"></span><span class="ln"></span></div>
+      <p class="muted" style="margin-bottom:18px">Ainda tem dúvidas? Converse direto com o Dr. Costa.</p>
+      <a class="btn btn-gold" href="#cta">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Tirar minhas dúvidas
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand">
+        <img src="assets/logo.png" alt="" style="height:56px;filter:invert(1) brightness(1.1)" />
+        <div class="brand-text">
+          <span class="brand-name">Costa e Bueno</span>
+          <span class="brand-sub">Advogados</span>
+        </div>
+      </div>
+      <p class="small">Advocacia especializada em direito de consórcios: anulação de multas abusivas, correção monetária e defesa dos direitos de consorciados em todo o Brasil.</p>
+    </div>
+    <div>
+      <h4>Banca</h4>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#importancia">Áreas de atuação</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li>WhatsApp: (00) 00000-0000</li>
+        <li>contato@costaebueno.com.br</li>
+        <li>Atendimento online</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Endereço</h4>
+      <ul>
+        <li>Av. Paulista, 0000 — Sala 00</li>
+        <li>São Paulo / SP</li>
+        <li>CEP 00000-000</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Costa e Bueno Advogados. Todos os direitos reservados.</span>
+    <span>OAB/XX 000.000 — Conforme provimento 205/2021 da OAB.</span>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Close other FAQ items when one opens (accordion behavior)
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(it => {
+    it.addEventListener('toggle', () => {
+      if (it.open){
+        items.forEach(o => { if (o !== it) o.open = false; });
+      }
+    });
+  });
+</script>
+</body>
+</html>
