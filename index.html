@@ -4,9 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Costa e Bueno Advogados — Especialistas em Consórcios Cancelados</title>
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
     --ink:#0f0d0a;
@@ -95,7 +98,7 @@
   .brand{display:flex;align-items:center;gap:12px}
   .brand img{height:52px;width:auto}
   .brand-text{display:flex;flex-direction:column;line-height:1}
-  .brand-name{font-family:"Playfair Display",serif;font-style:italic;font-weight:600;font-size:19px;letter-spacing:0.01em;color:var(--ink);white-space:nowrap}
+  .brand-name{font-family:"Allura",cursive;font-weight:400;font-size:28px;letter-spacing:0.02em;color:var(--ink);white-space:nowrap;line-height:1}
   .brand-sub{font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
   .nav-links{display:flex;align-items:center;gap:34px}
   .nav-links a{font-size:14px;font-weight:500;color:var(--ink-2);transition:color .2s}
@@ -148,17 +151,31 @@
     font-style:italic;font-weight:500;color:var(--gold);
   }
   .hero-lede{
-    margin-top:22px;max-width:560px;
+    margin-top:22px;max-width:520px;
     color:var(--ink-2);font-size:18px;line-height:1.65;
   }
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-bullets{
+    display:grid;gap:12px;margin-top:24px;max-width:520px;
+    list-style:none;padding:0;
+  }
+  .hero-bullets li{
+    display:flex;align-items:flex-start;gap:12px;
+    color:var(--ink-2);font-size:16px;line-height:1.5;
+  }
+  .hero-bullets .check{
+    flex:none;width:22px;height:22px;border-radius:999px;
+    background:var(--gold-glow);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);margin-top:1px;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
   .hero-meta{
-    display:flex;gap:28px;margin-top:48px;flex-wrap:wrap;
-    padding-top:28px;border-top:1px solid var(--line-2);
+    display:flex;gap:28px;margin-top:32px;flex-wrap:wrap;
+    padding-top:24px;border-top:1px solid var(--line-2);
   }
   .meta-item .num{
     font-family:"Cormorant Garamond",serif;
-    font-size:34px;font-weight:600;color:var(--ink);line-height:1;
+    font-size:22px;font-weight:600;color:var(--ink);line-height:1.2;
   }
   .meta-item .num em{color:var(--gold);font-style:normal}
   .meta-item .lbl{font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-top:6px}
@@ -226,9 +243,10 @@
     padding:110px 0;
     background:linear-gradient(180deg,var(--paper),var(--bone) 45%, var(--paper));
   }
-  .why-head{text-align:center;max-width:760px;margin:0 auto 64px}
+  .why-head{text-align:center;max-width:640px;margin:0 auto 64px}
   .why-head .eyebrow{margin-bottom:18px}
-  .why-head p{margin-top:18px;color:var(--ink-2);font-size:18px}
+  .why-head h2{margin-bottom:0}
+  .why-head p{margin-top:18px;color:var(--ink-2);font-size:17px;line-height:1.6}
   .why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -249,7 +267,7 @@
     margin-bottom:18px;
   }
   .why-card h3{margin-bottom:10px}
-  .why-card p{color:var(--muted);font-size:15px;line-height:1.6}
+  .why-card p{color:var(--muted);font-size:15px;line-height:1.5}
   .why-card::before{
     content:"";position:absolute;left:28px;right:28px;top:0;height:2px;
     background:linear-gradient(90deg,var(--gold),transparent);
@@ -289,7 +307,7 @@
   .cta h2 em{color:var(--gold-soft);font-style:italic;font-weight:500}
   .cta-lead{margin-top:20px;font-size:18px;color:rgba(251,248,242,0.78);max-width:520px}
   .cta-bullets{
-    display:grid;gap:14px;margin-top:30px;
+    display:grid;gap:14px;margin-top:24px;
   }
   .cta-bullets li{
     display:flex;align-items:flex-start;gap:12px;
@@ -480,7 +498,7 @@
   .social-proof{padding:110px 0;background:var(--bone)}
   .social-proof-head{text-align:center;max-width:720px;margin:0 auto 56px}
   .social-proof-head .eyebrow{margin-bottom:18px}
-  .social-proof-head p{margin-top:16px;color:var(--ink-2);font-size:18px}
+  .social-proof-head h2{margin-bottom:0}
   .reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:48px}
   .review-card{
     background:var(--paper);border:1px solid var(--line-2);
@@ -489,7 +507,7 @@
     display:flex;flex-direction:column;gap:14px;
   }
   .review-stars{color:#f59e0b;font-size:18px;letter-spacing:2px}
-  .review-text{font-size:15px;color:var(--ink-2);line-height:1.65;flex:1}
+  .review-text{font-size:15px;color:var(--ink-2);line-height:1.55;flex:1;font-style:italic}
   .review-text em{font-style:normal;font-weight:600;color:var(--ink)}
   .review-author{font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted)}
   .reputation-block{
@@ -498,7 +516,7 @@
     border-radius:var(--r-md);padding:32px 36px;
     box-shadow:var(--shadow-sm);
   }
-  .reputation-block h3{margin-bottom:18px;font-size:clamp(18px,1.4vw,22px)}
+  .reputation-block h3{margin-bottom:14px;font-size:clamp(18px,1.4vw,22px)}
   .reputation-list{display:flex;flex-direction:column;gap:10px;list-style:none;padding:0;margin:0}
   .reputation-list li{
     display:flex;align-items:center;gap:10px;
@@ -608,25 +626,32 @@
     <div class="hero-left">
       <h1>Desistiu do consórcio e a administradora quer devolver muito menos do que você pagou?</h1>
       <p class="hero-lede">
-        Se você possui uma carta de consórcio cancelada, pode estar deixando dinheiro para trás. Muitos contratos incluem multas, taxas e descontos que nem sempre são aplicados de forma adequada, o que torna essencial uma análise detalhada do caso.
+        Se você cancelou o consórcio e a devolução veio menor do que esperava, vale revisar os descontos antes de aceitar.
       </p>
-      <p class="hero-lede" style="margin-top:14px;font-size:16px">
-        Atuamos na revisão desses descontos com o objetivo de possibilitar a restituição correta dos valores pagos, conforme as particularidades de cada contrato.
-      </p>
-      <p class="hero-lede" style="margin-top:14px;font-size:16px">
-        Se você pagou parcelas de consórcio, cancelou o contrato, foi excluído do grupo ou simplesmente não deseja continuar pagando, é importante avaliar cuidadosamente os cálculos apresentados pela administradora antes de aceitá-los. Nem todos os descontos aplicados possuem respaldo jurídico adequado.
-      </p>
-      <p class="hero-lede" style="margin-top:14px;font-size:16px">
-        Outro ponto importante é a correção monetária dos valores pagos. A atualização deve ocorrer desde cada desembolso realizado pelo consorciado até o efetivo pagamento da restituição, algo que frequentemente não é aplicado pelas administradoras.
-      </p>
-      <p class="hero-lede" style="margin-top:14px;font-size:16px">
-        Além disso, o ajuizamento da ação pode abrir uma alternativa para o recebimento dos valores, sem a necessidade de aguardar o encerramento do grupo ou o sorteio dos cancelados, possibilitando a antecipação do pagamento por meio de um acordo judicial.
-      </p>
+      <ul class="hero-bullets">
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Multas, taxas e retenções que podem ser questionadas</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Correção monetária desde cada parcela paga</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Possibilidade de acordo judicial para antecipar a devolução</li>
+      </ul>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#formulario">Solicitar análise do meu caso</a>
         <a class="btn btn-ghost" href="#importancia">Quero entender meus direitos</a>
       </div>
-      <p style="margin-top:18px;font-size:13px;color:var(--muted)">Atendimento mediante análise prévia do contrato e documentos. Não há promessa de resultado.</p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <div class="num">Análise individual</div>
+          <div class="lbl">Cada contrato é diferente</div>
+        </div>
+        <div class="meta-item">
+          <div class="num">Atendimento humanizado</div>
+          <div class="lbl">Orientação clara e próxima</div>
+        </div>
+        <div class="meta-item">
+          <div class="num">Sem promessa</div>
+          <div class="lbl">Resultado depende do caso</div>
+        </div>
+      </div>
+      <p style="margin-top:20px;font-size:13px;color:var(--muted)">Atendimento mediante análise prévia do contrato e documentos. Não há promessa de resultado.</p>
     </div>
 
     <div class="hero-right">
@@ -637,7 +662,7 @@
         <span class="dot" aria-hidden="true"></span>
         <div class="pt">
           <b>Análise individual</b>
-          Cada caso é avaliado com atenção aos documentos apresentados.
+          Cada caso é avaliado com atenção aos documentos.
         </div>
       </div>
     </div>
@@ -650,39 +675,39 @@
     <div class="why-head reveal">
       <span class="eyebrow center">Você se identifica com alguma dessas situações?</span>
       <h2>Você pagou por meses ou anos e agora sente que pode perder boa parte do seu dinheiro?</h2>
-      <p>Muitas pessoas ingressam em um consórcio acreditando estar realizando um bom negócio. No entanto, quando precisam desistir, cancelar o contrato ou deixam de pagar as parcelas, acabam se deparando com descontos de multas, taxas e outros encargos que reduzem significativamente o valor a ser restituído. O grande problema é que, na maioria das vezes, o consorciado não compreende como esses cálculos foram realizados. Além disso, determinados descontos aplicados pelas administradoras podem ser excessivos ou até mesmo passíveis de questionamento judicial, a depender das condições do contrato e das circunstâncias do caso.</p>
+      <p>Ao desistir ou cancelar, multas e taxas costumam reduzir muito a devolução — e nem sempre esses descontos estão corretos.</p>
     </div>
 
     <div class="why-grid">
       <article class="why-card reveal">
         <div class="why-num">01</div>
         <h3>Multa por desistência</h3>
-        <p>A multa contratual aplicada aos consorciados desistentes geralmente é justificada pelo suposto prejuízo causado ao grupo e à administradora em razão da desistência. Contudo, para que essa penalidade seja validamente aplicada, é necessário que o alegado prejuízo seja efetivamente demonstrado e compatível com os limites previstos pela legislação e pela jurisprudência.</p>
+        <p>A multa só é válida se o prejuízo for comprovado e respeitar os limites legais.</p>
       </article>
       <article class="why-card reveal">
         <div class="why-num">02</div>
         <h3>Taxa de administração</h3>
-        <p>Verificamos se a cobrança está compatível com o serviço prestado e com o período em que você participou do grupo.</p>
+        <p>Verificamos se a cobrança corresponde ao período em que você participou do grupo.</p>
       </article>
       <article class="why-card reveal">
         <div class="why-num">03</div>
         <h3>Fundo de reserva</h3>
-        <p>Ao consorciado cancelado é assegurado o direito de participar do rateio final desses valores ou, conforme o caso, de obter sua devolução integral.</p>
+        <p>Confirmamos se você tem direito ao rateio final ou à devolução integral.</p>
       </article>
       <article class="why-card reveal">
         <div class="why-num">04</div>
         <h3>Correção monetária</h3>
-        <p>Verificamos se os valores pagos foram devidamente atualizados desde cada desembolso realizado pelo consorciado, em conformidade com a jurisprudência mais recente aplicável ao tema.</p>
+        <p>Checamos se os valores pagos foram atualizados desde cada parcela.</p>
       </article>
       <article class="why-card reveal">
         <div class="why-num">05</div>
         <h3>Prazo de devolução</h3>
-        <p>Em regra, a devolução dos valores ao consorciado cancelado ocorre apenas ao final do grupo ou mediante o sorteio dos participantes excluídos. Contudo, existe a possibilidade de celebração de acordo judicial visando antecipar a restituição dos valores.</p>
+        <p>Avaliamos se há possibilidade de acordo judicial para antecipar a restituição.</p>
       </article>
       <article class="why-card reveal">
         <div class="why-num">06</div>
         <h3>Falha de informação</h3>
-        <p>Verificamos se houve ausência de informações claras e adequadas no momento da contratação, bem como eventual promessa comercial confusa ou indução do consumidor a erro quanto às condições do consórcio.</p>
+        <p>Identificamos promessas confusas ou falta de clareza na contratação.</p>
       </article>
     </div>
     <div style="text-align:center;margin-top:48px" class="reveal">
@@ -697,16 +722,13 @@
     <div class="reveal">
       <span class="eyebrow" style="color:var(--gold-soft)">— Como funciona</span>
       <h2 style="margin-top:18px">Nós analisamos o seu contrato para identificar cobranças que podem estar reduzindo o valor que você tem a receber.</h2>
-      <p class="cta-lead">O Costa e Bueno Advogados atua de forma técnica e estratégica para avaliar contratos de consórcio, cálculos de devolução, multas, taxas e retenções aplicadas pela administradora.</p>
 
       <ul class="cta-bullets">
-        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Você envia as informações do consórcio — administradora, tipo, valor aproximado pago e situação da cota.</li>
-        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> O contrato e os documentos são analisados — contrato, boletos, comprovantes, extrato, notificações e eventual cálculo de devolução.</li>
-        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Identificamos pontos que podem ser questionados — multas, taxa de administração, fundo de reserva, seguros, correção monetária e demais retenções.</li>
-        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Indicamos o caminho jurídico possível — após a análise, o cliente entende quais medidas podem ser adotadas.</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Envie os dados do consórcio</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Analisamos contrato e documentos</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Identificamos cobranças questionáveis</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Indicamos o caminho jurídico possível</li>
       </ul>
-
-      <p style="margin-top:22px;font-size:13px;color:rgba(251,248,242,0.5);border-top:1px solid rgba(230,207,154,0.12);padding-top:18px;line-height:1.6">Cada caso depende da análise individual dos documentos. Não há garantia de resultado ou valor específico de restituição.</p>
 
       <div class="cta-actions">
         <a class="btn btn-wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
@@ -725,16 +747,16 @@
       <div class="name">Rafael</div>
       <div class="role">Advogado responsável · OAB/XX 000.000</div>
       <div class="chatbox" aria-hidden="true">
-        <div class="bubble me">Olá, desisti do consórcio e a administradora enviou um cálculo de devolução muito baixo. Os descontos estão corretos?
+        <div class="bubble me">Olá, desisti do consórcio e a administradora não me informou nada sobre a devolução. Tenho direito a receber?
           <span class="time">14:02</span>
         </div>
-        <div class="bubble them">Olá! Para verificar isso, preciso analisar o contrato e o cálculo apresentado. Pode me informar a administradora e o valor pago até agora?
+        <div class="bubble them">Olá! Isso é comum — muitas administradoras não comunicam o valor. Pode me informar a administradora e quanto você pagou até agora?
           <span class="time">14:02</span>
         </div>
         <div class="bubble me">Pago há 2 anos, R$ 650 por mês.
           <span class="time">14:03</span>
         </div>
-        <div class="bubble them">Com esses dados já consigo iniciar a análise. Cada caso tem suas particularidades — o importante é entender quais descontos foram aplicados antes de aceitar qualquer valor.
+        <div class="bubble them">Com esses dados já consigo iniciar a análise. Vamos verificar o contrato e entender o que você tem direito a receber.
           <span class="time">14:03</span>
         </div>
         <div class="bubble them"><span class="typing"><span></span><span></span><span></span></span></div>
@@ -750,13 +772,7 @@
       <span class="eyebrow">Atendimento</span>
       <h2>Atendimento jurídico com clareza, estratégia e responsabilidade.</h2>
       <p class="about-desc">
-        À frente do atendimento está Rafael, advogado do escritório Costa e Bueno Advogados, com atuação voltada à análise de contratos, Direito do Consumidor e situações em que o cliente precisa entender seus direitos antes de tomar uma decisão.
-      </p>
-      <p class="about-desc" style="margin-top:14px">
-        Com sede em Santo André, o escritório se destaca pelo atendimento próximo, transparente e humanizado, conduzindo cada caso com seriedade, clareza nas orientações e análise individual dos documentos apresentados.
-      </p>
-      <p class="about-desc" style="margin-top:14px">
-        Aqui, o primeiro passo não é criar promessas. É entender o seu caso, avaliar o contrato e indicar os caminhos jurídicos possíveis com responsabilidade.
+        Rafael, advogado do Costa e Bueno Advogados, conduz cada caso com análise individual de contratos e orientação clara em Direito do Consumidor. Com sede em Santo André, o escritório atende presencialmente e online em todo o Brasil — sem promessas, com transparência.
       </p>
       <div class="area-tags">
         <span class="area-tag">Atendimento humanizado</span>
@@ -792,41 +808,37 @@
     <div class="social-proof-head reveal">
       <span class="eyebrow center">Avaliações</span>
       <h2>Clientes destacam a clareza, atenção e segurança no atendimento.</h2>
-      <p>O Costa e Bueno Advogados constrói sua reputação com atendimento próximo, orientação clara e condução responsável de cada caso.</p>
     </div>
 
     <div class="reviews-grid">
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text"><em>"Fui muito bem atendido desde o primeiro contato."</em><br/>Recebi explicações claras, consegui entender melhor a minha situação e fui orientado com muita atenção.</p>
+        <p class="review-text"><em>"Fui muito bem atendido desde o primeiro contato."</em></p>
         <div class="review-author">Cliente atendido pelo escritório</div>
       </div>
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text"><em>"Atendimento profissional e humano."</em><br/>O escritório explicou tudo com calma, tirou minhas dúvidas e me passou segurança para entender os próximos passos.</p>
+        <p class="review-text"><em>"Atendimento profissional e humano."</em></p>
         <div class="review-author">Cliente atendido pelo escritório</div>
       </div>
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text"><em>"Orientação clara e objetiva."</em><br/>Gostei da forma como analisaram meu caso e explicaram o que poderia ser feito com responsabilidade.</p>
+        <p class="review-text"><em>"Orientação clara e objetiva."</em></p>
         <div class="review-author">Cliente atendido pelo escritório</div>
       </div>
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text"><em>"Equipe séria, atenciosa e transparente."</em><br/>Desde o início, senti que meu caso foi tratado com respeito, clareza e atenção aos detalhes.</p>
+        <p class="review-text"><em>"Equipe séria, atenciosa e transparente."</em></p>
         <div class="review-author">Cliente atendido pelo escritório</div>
       </div>
     </div>
 
     <div class="reputation-block reveal">
       <h3>Avaliações positivas no Google</h3>
-      <p style="font-size:15px;color:var(--muted);margin-bottom:18px">Clientes costumam destacar:</p>
       <ul class="reputation-list">
         <li>Clareza nas explicações.</li>
         <li>Atendimento próximo e respeitoso.</li>
         <li>Transparência sobre os caminhos possíveis.</li>
-        <li>Linguagem simples e objetiva.</li>
-        <li>Comprometimento com cada caso.</li>
       </ul>
     </div>
   </div>
@@ -843,23 +855,23 @@
     <div class="for-whom-grid">
       <div class="for-whom-card reveal">
         <h3>Para quem desistiu do consórcio</h3>
-        <p>Você não quer mais continuar pagando e deseja entender quais valores podem ser restituídos.</p>
+        <p>Quer entender o que pode ser restituído após a desistência.</p>
       </div>
       <div class="for-whom-card reveal">
         <h3>Para quem foi excluído por inadimplência</h3>
-        <p>Você deixou de pagar, foi retirado do grupo e quer saber se ainda pode receber parte dos valores pagos.</p>
+        <p>Foi retirado do grupo e quer saber se ainda pode receber algo.</p>
       </div>
       <div class="for-whom-card reveal">
-        <h3>Para quem recebeu cálculo de devolução baixo</h3>
-        <p>A administradora apresentou um valor menor do que você esperava e você quer verificar os descontos.</p>
+        <h3>Para quem não recebeu informação da administradora</h3>
+        <p>Desistiu do consórcio e a administradora não explicou quanto você vai receber.</p>
       </div>
       <div class="for-whom-card reveal">
         <h3>Para quem ainda está pagando, mas quer sair</h3>
-        <p>Você pensa em cancelar, mas antes precisa entender os riscos, prazos e possíveis perdas.</p>
+        <p>Pensa em cancelar e precisa entender riscos e prazos antes.</p>
       </div>
       <div class="for-whom-card reveal">
         <h3>Para quem se sentiu mal orientado na contratação</h3>
-        <p>Você acredita que não recebeu explicação clara sobre regras, multas, prazos ou riscos do consórcio.</p>
+        <p>Não recebeu explicação clara sobre regras, multas ou riscos.</p>
       </div>
     </div>
 
@@ -875,7 +887,7 @@
     <div class="lead-form-head reveal">
       <span class="eyebrow center">Análise do caso</span>
       <h2>Envie as informações do seu consórcio</h2>
-      <p>Preencha os dados abaixo para que possamos entender melhor a sua situação e avaliar os próximos passos.</p>
+      <p>Conte-nos sobre o seu consórcio para iniciarmos a avaliação.</p>
     </div>
 
     <form class="reveal" action="https://wa.me/5500000000000" method="get" target="_blank">
@@ -919,7 +931,7 @@
             <option>Ainda estou pagando</option>
             <option>Desisti do consórcio</option>
             <option>Fui excluído por falta de pagamento</option>
-            <option>Já recebi cálculo de devolução</option>
+            <option>A administradora não me informou nada</option>
             <option>Não sei minha situação</option>
           </select>
         </div>
@@ -951,7 +963,7 @@
     <div class="faq-head reveal">
       <span class="eyebrow center">Perguntas frequentes</span>
       <h2 style="margin-top:18px">Dúvidas comuns de quem desistiu de um consórcio</h2>
-      <p>Reunimos as perguntas que mais ouvimos de quem desistiu, foi excluído ou quer entender o cálculo de devolução do seu consórcio.</p>
+      <p>As perguntas mais comuns de quem desistiu ou quer entender a devolução.</p>
     </div>
 
     <div class="faq-list">
@@ -1030,7 +1042,6 @@
 
     <div style="text-align:center;margin-top:48px" class="reveal">
       <div class="ornament" style="margin-bottom:22px"><span class="ln"></span><span class="dia"></span><span class="ln"></span></div>
-      <p class="muted" style="margin-bottom:18px">Meu caso se encaixa. Quero análise.</p>
       <a class="btn btn-gold" href="#cta">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         Falar com um advogado sobre meu consórcio
@@ -1050,7 +1061,7 @@
           <span class="brand-sub">Advogados</span>
         </div>
       </div>
-      <p class="small">Atuação jurídica em demandas envolvendo contratos de consórcio, desistência, exclusão, cancelamento, revisão de cobranças e restituição de valores pagos.</p>
+      <p class="small">Atuação em consórcios cancelados: revisão de cobranças e restituição de valores.</p>
     </div>
     <div>
       <h4>Navegação</h4>
@@ -1081,7 +1092,7 @@
   </div>
   <div class="container footer-bottom">
     <span>© 2026 Costa e Bueno Advogados. Todos os direitos reservados.</span>
-    <span>As informações desta página possuem caráter informativo e não configuram promessa de resultado. A atuação profissional depende da análise individual do contrato, documentos e circunstâncias do caso concreto.</span>
+    <span>Conteúdo informativo, sem promessa de resultado. A atuação depende da análise individual de cada caso.</span>
   </div>
 </footer>
 
