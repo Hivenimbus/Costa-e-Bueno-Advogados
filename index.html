@@ -92,12 +92,12 @@
   }
   .nav-inner{
     display:flex;align-items:center;justify-content:space-between;
-    padding:14px 0;
+    padding:10px 0;
     gap:24px;
   }
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand img{height:68px;width:auto}
-  .footer-brand .brand img{height:72px;filter:invert(1) brightness(1.1)}
+  .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .brand img{height:104px;width:auto}
+  .footer-brand .brand img{height:108px;filter:invert(1) brightness(1.1)}
   .brand-text{display:flex;flex-direction:column;line-height:1}
   .brand-name{font-family:"Allura",cursive;font-weight:400;font-size:28px;letter-spacing:0.02em;color:var(--ink);white-space:nowrap;line-height:1}
   .brand-sub{font-size:10px;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
@@ -582,6 +582,8 @@
     .lead-form{padding:72px 0}
     .form-grid{grid-template-columns:1fr}
     .form-group.full{grid-column:auto}
+    .brand img{height:80px}
+    .nav-inner{padding:8px 0}
   }
 
   /* ---------- REVEAL ---------- */
